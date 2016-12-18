@@ -46,4 +46,5 @@ RUN apk add --update wget ca-certificates \
 		&& apk del wget ca-certificates \
 		&& rm /tmp/* /var/cache/apk/*
 
-ENTRYPOINT ["/usr/bin/java"]
+ENTRYPOINT []
+CMD ["java", "-version"]
