@@ -1,10 +1,10 @@
 FROM alpine:3.2
 
 ENV JAVA_VERSION=8
-ARG JAVA_UPDATE=66
-ARG JAVA_BUILD=17
-ARG JAVA_HOME=/usr/lib/jvm/default-jvm
-ARG JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF8
+ENV JAVA_UPDATE=66
+ENV JAVA_BUILD=17
+ENV JAVA_HOME=/usr/lib/jvm/default-jvm
+ENV JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF8
 
 RUN apk add -U libc6-compat wget sudo openssh-client git \
 	&& wget -O /tmp/glibc.apk "https://github.com/sgerrand/alpine-pkg-glibc/releases/download/unreleased/glibc-2.23-r3.apk" \
